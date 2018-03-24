@@ -1,0 +1,189 @@
+/*
+    TOPBAR.CSS
+
+    - updated: 19.03.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// NAVIGATION
+//-----------------------------------------------------------------
+
+.global-navigation {
+    display: inline-flex;
+    position: relative; // [LOCKED]
+    padding: rem-calc(10 0);
+    margin-left: auto;
+    margin-right: rem-calc(-20);
+    z-index: 9999;
+}
+
+//**********************************************
+// HEADROOM - TOP
+//**********************************************
+
+.headroom--top {
+    .global-navigation {
+        position: relative; // [LOCKED]
+        top: rem-calc(-38);
+    }
+}
+
+//-----------------------------------------------------------------
+// GENERAL UL
+//-----------------------------------------------------------------
+
+.lv-topbar ul {
+    padding: 0; // [RESET]
+    margin: 0;  // [RESET]
+    list-style: none; // [RESET]
+    // font-family: $headings-font-family;
+    font-size: rem-calc(15);
+}
+
+//=========================================
+// TOP PARENT UL
+//=========================================
+
+.lv-topbar > ul {
+    display: flex;
+
+    > li {
+        position: relative; // [LOCKED]
+        margin: 0; // [RESET]
+    }
+}
+
+//-----------------------------------------------------------------
+// ALL ANCHORS (INCL. DROPDOWN CHILDREN)
+//-----------------------------------------------------------------
+
+.lv-topbar a {
+    display: block; // [LOCKED]
+    text-decoration: none;
+    font-weight: 600; // [LOCKED]
+}
+
+//-----------------------------------------------------------------
+// TOP PARENT ANCHORS (NAV)
+//-----------------------------------------------------------------
+
+.lv-topbar .top-parent-anchor {
+    display: block; // [LOCKED]
+    padding: rem-calc(0 15);
+    line-height: 44px; // [LOCKED]
+    text-transform: uppercase;
+    color: white; // [THEMEABLE]
+    transition: background 150ms ease;
+}
+
+//=========================================
+// HOVER, ACTIVE
+//=========================================
+
+.lv-topbar .top-parent-anchor:hover {
+    background: rgba(black, 0.08); // [THEMEABLE]
+}
+
+.lv-topbar .active .top-parent-anchor {
+    // background: rgba(white, 0.15);
+
+    .text {
+        padding-bottom: rem-calc(3);
+        border-bottom: 2px solid white; // [THEMEABLE]
+    }
+}
+
+.lv-topbar .top-parent-anchor:hover {
+    .text {
+        border-bottom: 0;
+        border-color: transparent;
+    }
+}
+
+//-----------------------------------------------------------------
+// DROPDOWN ANCHOR HOVERS
+//-----------------------------------------------------------------
+
+.lv-topbar .has-dropdown:hover > .top-parent-anchor {
+    background: rgba(black, 0.1);
+}
+
+.lv-topbar .has-dropdown:hover > .dropdown {
+    @include media-breakpoint-up(lg) {
+        height: auto;
+        overflow: visible;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+//-----------------------------------------------------------------
+// DROPDOWNS
+//-----------------------------------------------------------------
+
+.lv-topbar .dropdown {
+    display: none; // [OPT IN DESIGN / OFF CANVAS ETC]
+    position: absolute;
+    left: 0;
+    width: rem-calc(240);
+    height: 0; // so hit areas aren't triggered
+    border: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    background: white;
+    overflow: hidden; // prevent hit areas triggering
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: transform 200ms ease;
+}
+
+//-----------------------------------------------------------------
+// DROPDOWNS
+//-----------------------------------------------------------------
+
+// Prevent far-right dropdown from exceeding page width
+.lv-topbar .has-dropdown-right-aligned .dropdown {
+    right: 0;
+    left: auto;
+}
+
+.lv-topbar .dropdown.is-nav-included {
+    display: block;
+}
+
+//=========================================
+// DROPDOWN LIST + ANCHORS
+//=========================================
+
+.lv-topbar .dropdown li {
+    position: relative;
+
+    a {
+        padding: rem-calc(15 20);
+        font-size: rem-calc(14); // opinionated
+        color: #444;
+        transition: none; // [LOCKED]
+
+        &:hover {
+            background: rgba(black, 0.1);
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// CONTEXT
+//-----------------------------------------------------------------
+
+.lv-topbar .is-hidden-for-topbar {
+    display: none;
+}
+
+.lv-off-canvas .is-hidden-for-topbar {
+    border: 0;
+}
+
+//=========================================
+//
+//=========================================

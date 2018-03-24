@@ -1,0 +1,21 @@
+- title: Home
+  url: /
+
+- title: About
+  url: /about/
+
+- title: Tungsten Industry
+  url: /tungsten-industry/
+
+- title: Santa Comba Project
+  url: /santa-comba-project/
+
+- title: Investors
+  url: /investors/
+  include_children_in_nav: true
+  children:
+    - title: News
+      url: /investors/news/
+
+- title: Contact
+  url: /contact/

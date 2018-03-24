@@ -1,0 +1,143 @@
+/*
+    SECTIONS.CSS
+
+    - updated: 29.12.17
+    - liquidvisual.com
+
+    GLOSSARY:
+
+        .section
+            &.is-dark
+            &.is-darker
+            &.is-darker
+            &.has-dark-bleed
+            &.has-darker-bleed
+            &.has-light-bleed
+            &.has-image-bg
+                &.is-fixed
+                &.has-fixed-bleed
+                &.has-tint
+                &.has-bleed-tint
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// SECTION
+//-----------------------------------------------------------------
+
+.section {
+    // padding: ($spacer * 2.5) 0;
+    overflow: hidden; // [LOCKED]
+
+    @include media-breakpoint-up(md) {
+        // padding: ($spacer * 3) 0;
+    }
+}
+
+//-----------------------------------------------------------------
+// SECTION BODY
+//-----------------------------------------------------------------
+
+.section-body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+
+	&:after {
+		position: absolute;
+		top: 0;
+		width: 200%;
+		height: 100%;
+		background: inherit;
+	}
+
+	&.bleed-left:after,
+	&.bleed-right:after {
+		content: "";
+	}
+
+	&.bleed-left:after {
+		left: -200%;
+	}
+
+	&.bleed-right:after {
+		right: -200%;
+	}
+
+	.section-body-inner {
+		overflow: hidden; // [LOCKED]
+	}
+}
+
+//-----------------------------------------------------------------
+// SECTION BG COLORS [LOCKED]
+//-----------------------------------------------------------------
+
+.section,
+.section-body {
+	&.is-dark { background-color: $primary; }
+	&.is-darker { background-color: $secondary; }
+	&.is-light { background-color: white; }
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// HAS DARK TEXT (DARK TEXT ON LIGHT)
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.section,
+.section-body {
+	&.is-dark,
+	&.is-darker {
+	    h1, h2, h3, h4, h5, h6,
+	    p, ul, ol, td {
+	        color: white;
+	    }
+	}
+}
+
+//-----------------------------------------------------------------
+// HAS IMAGE BG
+//-----------------------------------------------------------------
+
+.section.has-image-bg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    //=========================================
+    // ADDITIONAL COMMANDS
+    //=========================================
+
+    @include media-breakpoint-up(xl) {
+        &.is-fixed {
+            background-attachment: fixed;
+        }
+    }
+
+    //=========================================
+    // HAS TINT
+    //=========================================
+
+    &.has-tint {
+        > .container {
+            position: relative;
+            z-index: 1; // [LOCKED]
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -200%;
+            width: 400%;
+            height: 100%;
+            background-color: rgba(black, 0.6); //rgba(#222, 0.6);
+        }
+    }
+}
+
+//=========================================
+//
+//=========================================

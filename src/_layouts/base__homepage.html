@@ -1,0 +1,90 @@
+---
+layout: base
+---
+
+{% include hero.html %}
+
+<!-- BODY -->
+<main class="main-body">
+
+	<!-- SECTION -->
+	<section class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-xl-5">
+
+					<!-- FEATURED PROJECT -->
+					<section class="section-body has-overflow-auto py-5 pr-5">
+						<h2>Santa Comba Project</h2>
+						<p>Some introductory content about the project,  sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellent esque eu, pretium quis, sem. Nulla consequat massa quis enim parturient montes. Penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+						<p><a href="#" class="btn btn-primary">Read More <i class="fa fa-angle-right"></i></a></p>
+					</section>
+
+				</div>
+				<div class="col-md-6 col-xl-7">
+
+					<!-- INVESTORS -->
+					<section class="section-body is-dark bleed-right p-5">
+						<h2>Investors</h2>
+						<p>Presentations, news, informatin about investing in GTT. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+						<p><a href="#" class="btn btn-primary">Read More <i class="fa fa-angle-right"></i></a></p>
+					</section>
+
+					<!-- ABOUT -->
+					<section class="section-body is-darker bleed-right p-5">
+						<h2>About</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>
+						<p><a href="#" class="btn btn-primary">Read More <i class="fa fa-angle-right"></i></a></p>
+					</section>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- IMAGE TEST -->
+	<section class="section has-image-bg" style="background-image: url(/assets/img/content/truck-test.jpg)">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 offset-md-5">
+
+					<!-- SECTION BODY -->
+					<div class="section-body is-dark bleed-right">
+						<div class="section-body-inner">
+							{% for i in (1..4) %}
+								<p>Some introductory content about the project,  sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellent esque eu, pretium quis, sem. Nulla consequat massa quis enim parturient montes. Penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+								<p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- IMAGE TEST -->
+	<section class="section has-image-bg" style="background-image: url(/assets/img/content/truck-test.jpg)">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+
+					<!-- SECTION BODY -->
+					<div class="section-body is-light bleed-left">
+						<div class="section-body-inner">
+							{% for i in (1..4) %}
+								<p>Some introductory content about the project,  sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellent esque eu, pretium quis, sem. Nulla consequat massa quis enim parturient montes. Penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+								<p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+</main>

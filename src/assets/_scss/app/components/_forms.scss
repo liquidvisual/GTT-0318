@@ -1,0 +1,88 @@
+/*
+    FORMS.CSS
+
+    - updated: 02.01.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// BOOTSTRAP VALIDATION
+// http://1000hz.github.io/bootstrap-validator/#validator-events
+//-----------------------------------------------------------------
+
+form[data-toggle="validator"] {
+	.error {
+		display: none;
+		padding: rem-calc(5 10 4 10);
+		background: $red;
+		font-weight: bold;
+		color: white;
+	}
+
+	.has-error > .error {
+		display: block;
+		margin-bottom: $form-group-margin-bottom;
+	}
+
+	// .has-error > .form-control {
+	// 	border-bottom-left-radius: 0;
+	// 	border-bottom-right-radius: 0;
+	// 	margin-bottom: 0;
+	// }
+}
+
+//-----------------------------------------------------------------
+// ASTERISK
+//-----------------------------------------------------------------
+
+.asterisk {
+	font-size: rem-calc(30);
+	line-height: 0;
+	color: $blue;
+}
+
+//-----------------------------------------------------------------
+// FORM GROUPS WITH ICONS
+//-----------------------------------------------------------------
+
+.form-group.has-icon {
+	position: relative;
+
+	> i {
+		position: absolute;
+		top: rem-calc(24);
+		left: rem-calc(15);
+		line-height: 0;
+		color: rgba(black, 0.4);
+
+		+ input {
+			padding-left: rem-calc(40);
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// DEFAULTS
+//-----------------------------------------------------------------
+
+fieldset {
+	margin-bottom: $spacer;
+}
+
+.custom-control {
+	margin-bottom: rem-calc(15);
+}
+
+form label em,
+form label i {
+	color: rgba(white, 0.5);
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

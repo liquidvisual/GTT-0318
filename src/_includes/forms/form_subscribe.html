@@ -1,0 +1,29 @@
+{% assign settings = site.data.settings %}
+
+{% comment %}
+<!-- IF SUCCESS -->
+<div class="alert alert-success alert-dismissible fade show" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <p class="mb-0"><strong>Thanks!</strong> You've been added to my mailing list.</p>
+</div>
+
+<!-- IF FAILURE -->
+<div class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <p class="mb-0"><strong>Oops!</strong> Please try again later.</p>
+</div>
+{% endcomment %}
+
+<!-- FORM SUBSCRIBE -->
+<form data-toggle="validatorX" novalidateX netlify>
+    <div class="form-group has-icon mb-3">
+        <i class="fa fa-envelope"></i>
+        <input class="form-control" name="Email" type="email" placeholder="Email" required>
+        <!-- <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small> -->
+    </div>
+    <button type="submit" class="btn btn-primary btn-block mb-0"><span class="text-hover">Do it!</span><span class="text-default">Subscribe</span></button>
+</form>

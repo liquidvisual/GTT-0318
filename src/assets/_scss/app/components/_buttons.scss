@@ -1,0 +1,64 @@
+/*
+    BUTTONS.CSS
+
+    - updated: 24.03.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// PRIMARY
+//-----------------------------------------------------------------
+
+.btn-primary,
+.btn-primary.disabled,
+.btn-secondary {
+    display: inline-flex;
+    position: relative;
+    min-width: rem-calc(180);
+    padding: rem-calc(16 65 13 25); // [LOCKED]
+    border: 0; // [LOCKED] - reset
+    background: $tertiary;
+    text-align: left;
+    text-transform: uppercase;
+    // line-height: 1.2; // for multiline
+    transition: 200ms ease background-color;
+
+    .fa-angle-right {
+        position: absolute;
+        right: rem-calc(20);
+        margin-top: -2px;
+        font-size: rem-calc(25);
+        font-weight: 600;
+    }
+
+    &:hover,
+    &:active {
+        background: lighten($tertiary, 5%) !important; // [LOCKED]
+    }
+}
+
+//-----------------------------------------------------------------
+// CONTEXT
+//-----------------------------------------------------------------
+
+.is-dark,
+.is-darker {
+
+    .btn-primary,
+    .btn-primary.disabled,
+    .btn-secondary {
+        background: $quaternary;
+        color: $secondary;
+
+        &:hover,
+        &:active {
+            background: lighten($quaternary, 10%) !important; // [LOCKED]
+        }
+    }
+}
+
+//=========================================
+//
+//=========================================

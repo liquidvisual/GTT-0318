@@ -1,0 +1,39 @@
+# GLOBAL SITE SETTINGS
+cname: gtt.yourwebvisual.com
+allow_robots: false
+
+# META
+title: Galicia Tin & Tungsten
+title_homepage: Galicia Tin & Tungsten
+company: Galicia Tin & Tungsten
+description: Galicia Tin & Tungsten SL is focused on the exploration and development of the Santa Comba tungsten and tin project located in the Galicia region of northwest Spain
+
+# DEVELOPER
+github_repo_owner: liquidvisual
+github_repo_path: https://github.com/liquidvisual/GTT-0318
+github_repo_name: GTT-0318
+jekyll_version: 3.7.0
+
+# OFFICES
+offices:
+  - title:
+    address:
+    phone:
+    email:
+
+# SOCIAL MEDIA
+social_media:
+  - title: Facebook
+    url: '#'
+  - title: Twitter
+    url: '#'
+
+# GOOGLE
+google_analytics: 'UA-XXXXXXXX-X'
+
+# AUTHOR
+author:
+  title: Much Media
+  url: https://www.muchmedia.com.au/
+  logo: /assets/img/ui/much-media-logo.svg
+  description: Website by Much Media

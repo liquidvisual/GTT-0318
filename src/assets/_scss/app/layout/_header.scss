@@ -1,0 +1,167 @@
+/*
+    HEADER.CSS
+
+    - Last updated: 19.03.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$header-body-sm-height: 60px !default;
+$header-body-md-height: 90px !default;
+$header-body-lg-height: 200px !default;
+
+//-----------------------------------------------------------------
+// HEADROOM
+//-----------------------------------------------------------------
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear,
+    			background-color 200ms ease;
+}
+
+//****************************************************
+// PINNED - SCROLLING DOWN
+//****************************************************
+
+.headroom--pinned {
+    @include media-breakpoint-down(sm) {
+        transform: translateY(0%);
+    }
+}
+
+//****************************************************
+// UNPINNED - SCROLLING UP
+//****************************************************
+
+.headroom--unpinned {
+	@include media-breakpoint-down(sm) {
+    	transform: translateY(-100%);
+    	transition-delay: 1000ms; // delay for UX
+	}
+}
+
+//****************************************************
+// HEADROOM TOP
+// header is transparent when at top
+//****************************************************
+
+.headroom--top {
+	.global-header-hamburger {
+		@include media-breakpoint-up(md) {
+		    margin: 5px 0 auto auto;
+		}
+	}
+}
+
+//****************************************************
+// HEADROOM NOT TOP
+//****************************************************
+
+.headroom--not-top {
+
+	&.global-header {
+		box-shadow: 0 0 3px 1px rgba(black, 0.2);
+
+		.global-header-body {
+			background: $primary;
+			transition: all 300ms ease;
+
+			@include media-breakpoint-up(md) {
+			    height: $header-body-md-height;
+			}
+
+			.logo img {
+				@include media-breakpoint-up(md) {
+				    width: rem-calc(100);
+				    height: auto;
+				}
+			}
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// HEADER GENERAL
+//-----------------------------------------------------------------
+
+.global-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	// background: rgba(white, 0.2); // [THEMEABLE]
+	z-index: 9999;
+}
+
+//-----------------------------------------------------------------
+// HEADER BODY
+//-----------------------------------------------------------------
+
+.global-header-body {
+	display: flex;
+	align-items: center;
+	height: $header-body-sm-height;
+
+	@include media-breakpoint-up(md) {
+	    // height: $header-body-md-height;
+	    height: auto;
+	    padding: rem-calc(40 0); // this gets overridden below (sort of)
+	}
+
+	@include media-breakpoint-up(lg) {
+		height: $header-body-lg-height;
+	}
+
+	//=========================================
+	// HEADER HEIGHT [LOCKED]
+	//=========================================
+
+	> .container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		@include media-breakpoint-down(xs) {
+		    width: 100%; // fixes mobile glitch?
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// LOGO
+//-----------------------------------------------------------------
+
+.global-header .logo {
+	@include media-breakpoint-up(md) {
+	    // margin: 30px 0 0 0; // adjust the logo here
+	}
+
+	.logo-light {
+		display: none;
+	}
+
+	img {
+		// width: 80px;
+		// max-height: 60px;
+		// transition: all 180ms ease-out;
+
+		@include media-breakpoint-down(sm) {
+			max-height: 60px;
+		    padding: rem-calc(10 0);
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// HAMBURGER
+//-----------------------------------------------------------------
+
+.global-header-hamburger {
+	margin: auto 0 auto auto;
+}
+
+//=========================================
+//
+//=========================================
