@@ -8,7 +8,8 @@
 
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:500,600|">
-    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+    <!-- <script src="https://unpkg.com/vue/dist/vue.min.js"></script> -->
     <link rel="stylesheet" href="/assets/css/minified.css">
 </head>
 <body class="">
@@ -135,9 +136,99 @@
         <!-- /.lv-hero-wrapper -->
         
 <!-- BODY --><main class="main-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <!-- CONTACT -->
+            <section class="section has-image-bg is-top-right" style="background-image: url(/assets/img/content/contact-1.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+
+                            <!-- SECTION BODY -->
+                            <div class="section-body is-white bleed-left">
+                                <div class="row">
+                                    <div class="col-md-11">
+
+                                        <!-- IF SUCCESS (HIDDEN) -->
+                                        <div class="alert alert-success alert-dismissible fade show mb-4" role="alert" hidden>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <strong>Success!</strong>
+                                            <br>Thanks for that. Your message has been receieved.</div>
+
+                                        <!-- IF FAILURE (HIDDEN) -->
+                                        <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert" hidden>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <strong>Oops!</strong>
+                                            <br>Something went wrong. Please try again.</div>
+                                        <h2>Get In Touch</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div class="spacer mb-4"></div>
+
+                                        <!-- FORM CONTACT -->
+                                        <form id="form-contact" name="Contact Form" action="/" data-toggle="validator" novalidate>
+                                            <fieldset class="mb-1">
+
+                                                <!-- NAME* -->
+                                                <label class="form-group d-block mb-3">
+
+                                                    <!-- <p class="mb-2">Name<small class="asterisk">*</small></p> -->
+                                                    <input class="form-control" name="Name" type="text" placeholder="Name*" required>
+                                                    <small class="error shake animated">
+                                                        <i class="fa fa-warning"></i>&nbsp; Your name is required.</small>
+                                                </label>
+
+                                                <!-- EMAIL* -->
+                                                <label class="form-group d-block mb-3">
+
+                                                    <!-- <p class="mb-2">Email<small class="asterisk">*</small></p> -->
+                                                    <input class="form-control" name="Email" type="email" placeholder="Email*" required>
+                                                    <small class="error shake animated">
+                                                        <i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
+                                                </label>
+
+                                                <!-- PHONE -->
+                                                <label class="form-group d-block mb-3">
+
+                                                    <!-- <p class="mb-2">Phone</p> -->
+                                                    <input class="form-control" name="Phone" type="text" placeholder="Phone">
+                                                </label>
+
+                                                <!-- MESSAGE* -->
+                                                <label class="form-group d-block">
+
+                                                    <!-- <p class="mb-3">Message<small class="asterisk">*</small></p> -->
+                                                    <textarea class="form-control" name="Message" rows="6" placeholder="Message*" required></textarea>
+                                                    <small class="error shake animated">
+                                                        <i class="fa fa-warning"></i>&nbsp; Please write your message.</small>
+                                                </label>
+                                            </fieldset>
+
+                                            <!-- * REQUIRED -->
+                                            <p class="float-right">
+                                                <small class="asterisk">*</small>
+                                                <small class="text-muted" style="position: relative; top: -5px;">required</small>
+                                            </p>
+
+                                            <!-- SUBMIT -->
+                                            <button type="submit" class="btn btn-primary mb-4">Send
+                                                <i class="fa fa-angle-right"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE IMAGE -->
+                <div class="mobile-image hidden-md-up">
+                    <span class="has-image-bg is-top-right" style="background-image: url(/assets/img/content/contact-1.jpg)"></span>
+                </div>
+            </section>
         </main>
 
         <!-- FOOTER -->
@@ -147,8 +238,8 @@
             <section class="global-footer-bottom">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6"></div>
-                        <div class="col-6 text-right">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6 text-right">
                             <small>
                                 <a class="author-logo" target="_blank" href="https://www.muchmedia.com.au/">
                                     <span class="text">Website by Much Media</span>&nbsp;&nbsp;&nbsp;
