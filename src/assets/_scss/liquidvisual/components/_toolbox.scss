@@ -29,13 +29,13 @@ $include-developer-styles: true !default;
 //-----------------------------------------------------------------
 
 ::-moz-selection {
-	// background: lighten($primary-color, 10%);
+	background: lighten($primary, 30%);
 	color: white;
 	text-shadow: none;
 }
 
 ::selection {
-	// background: lighten($primary-color, 10%);
+	background: lighten($primary, 30%);
 	color: white;
 	text-shadow: none;
 }

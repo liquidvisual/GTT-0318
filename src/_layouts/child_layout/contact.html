@@ -2,4 +2,27 @@
 layout: base__page
 ---
 
-{{ content }}
+<!-- CONTACT -->
+<section class="section has-image-bg is-top-right" style="background-image: url(/assets/img/content/contact-1.jpg)">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+
+				<!-- SECTION BODY -->
+				<div class="section-body is-white bleed-left">
+					<div class="row">
+						<div class="col-md-11">
+							{% include forms/form_basic.html %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MOBILE IMAGE -->
+	<div class="mobile-image hidden-md-up">
+		<span class="has-image-bg is-top-right" style="background-image: url(/assets/img/content/contact-1.jpg)"></span>
+	</div>
+
+</section>

@@ -31,7 +31,7 @@
     overflow: hidden; // [LOCKED]
 
     @include media-breakpoint-up(md) {
-        // padding: ($spacer * 3) 0;
+        // padding: ($spacer * 5.5) 0;
     }
 }
 
@@ -44,7 +44,14 @@
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
+    padding: ($spacer * 2) 0;
+    // border: 1px solid black;
 
+    @include media-breakpoint-up(xl) {
+        padding: ($spacer * 5.3) 0;
+    }
+
+    &:before,
 	&:after {
 		position: absolute;
 		top: 0;
@@ -53,12 +60,26 @@
 		background: inherit;
 	}
 
-	&.bleed-left:after,
+    &:before { // FORCE SM-DOWN
+        @include media-breakpoint-down(sm) {
+            content: "";
+            left: -200%;
+        }
+    }
+
+    &:after { // FORCE SM-DOWN
+        @include media-breakpoint-down(sm) {
+            content: "";
+            right: -200%;
+        }
+    }
+
+	&.bleed-left:before,
 	&.bleed-right:after {
-		content: "";
+        content: "";
 	}
 
-	&.bleed-left:after {
+	&.bleed-left:before {
 		left: -200%;
 	}
 
@@ -79,7 +100,8 @@
 .section-body {
 	&.is-dark { background-color: $primary; }
 	&.is-darker { background-color: $secondary; }
-	&.is-light { background-color: white; }
+	&.is-light { background-color: #f4f4f4; }
+    &.is-white { background-color: white; }
 }
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -91,9 +113,17 @@
 	&.is-dark,
 	&.is-darker {
 	    h1, h2, h3, h4, h5, h6,
-	    p, ul, ol, td {
+	    p, ul, ol, td, a:not(.btn)  {
 	        color: white;
 	    }
+
+        hr {
+            border-color: #5e6269;
+        }
+
+        date {
+            color: #818388;
+        }
 	}
 }
 
@@ -117,6 +147,18 @@
     }
 
     //=========================================
+    // BACKGROUND POSITION
+    //=========================================
+
+    &.is-top-left {
+        background-position: top left;
+    }
+
+    &.is-top-right {
+        background-position: top right;
+    }
+
+    //=========================================
     // HAS TINT
     //=========================================
 
@@ -135,6 +177,28 @@
             height: 100%;
             background-color: rgba(black, 0.6); //rgba(#222, 0.6);
         }
+    }
+}
+
+//-----------------------------------------------------------------
+// MOBILE IMAGE
+//-----------------------------------------------------------------
+
+.mobile-image {
+    .has-image-bg {
+        display: block;
+        height: rem-calc(280);
+    }
+
+    .has-image-bg.is-top-right {
+        background-position: right center;
+        background-size: 280%;
+        background-color: white;
+    }
+
+    .has-image-bg.is-top-left {
+        background-position: left center;
+        background-size: 280%;
     }
 }
 

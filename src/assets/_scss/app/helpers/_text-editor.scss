@@ -11,6 +11,42 @@
 $spacer: rem-calc(20) !default;
 
 //-----------------------------------------------------------------
+// DOCUMENT LINK
+//-----------------------------------------------------------------
+
+a.document-link,
+.document-link a {
+	display: flex;
+	padding: rem-calc(10 15);
+	margin-bottom: $spacer;
+	background: $tertiary;
+	color: white;
+	font-weight: 600;
+
+	&:hover {
+		background: lighten($tertiary, 5%) !important; // [LOCKED]
+	}
+
+	&:before,
+	&:after {
+		font-family: "FontAwesome";
+		max-width: rem-calc(19);
+	}
+
+	&:before {
+		content: "\f15c";
+		margin-right: $spacer/2;
+	}
+
+	&:after {
+		content: "\f105";
+		font-size: rem-calc(25);
+		line-height: 1;
+		margin-left: auto;
+	}
+}
+
+//-----------------------------------------------------------------
 // IMAGE ALIGNMENT
 //-----------------------------------------------------------------
 

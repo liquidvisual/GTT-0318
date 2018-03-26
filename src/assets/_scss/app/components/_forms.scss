@@ -34,6 +34,23 @@ form[data-toggle="validator"] {
 }
 
 //-----------------------------------------------------------------
+// PLACEHOLDER
+//-----------------------------------------------------------------
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	text-transform: uppercase;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	text-transform: uppercase;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	text-transform: uppercase;
+}
+:-moz-placeholder { /* Firefox 18- */
+	text-transform: uppercase;
+}
+
+//-----------------------------------------------------------------
 // ASTERISK
 //-----------------------------------------------------------------
 

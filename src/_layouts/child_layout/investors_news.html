@@ -2,4 +2,59 @@
 layout: base__page
 ---
 
-{{ content }}
+<!-- BREADCRUMBS -->
+<!-- <section class="section is-light bleed-leftX">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				{ % include snippets/breadcrumb.html %}
+			</div>
+		</div>
+	</div>
+</section> -->
+
+<!-- NEWS -->
+<section class="section has-image-bg is-top-right" style="background-image: url(/assets/img/content/news-item-1.jpg)">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+
+				<!-- SECTION BODY -->
+				<div class="section-body is-white bleed-left">
+
+					<div class="row">
+						<div class="col-md-11">
+							<h2 class="mb-0">News</h2>
+
+							<!-- NEWS ARTICLES -->
+							{% for item in site.data.lorem_ipsum | limit: 6 %}
+								<hr>
+								<article class="pr-xl-4">
+									<h3>{{ item.title }}</h3>
+									<p><b class="text-uppercase"><date>{{ item.date | date: "%d %B %Y" }}</date></b></p>
+									<p class="mb-1">{{ item.body | truncate: 350 }}</p>
+									<a class="text-uppercase" href="/investors/news/news-item/"><b>Read more</b> <i class="fa fa-angle-right"></i></a>
+								</article>
+							{% endfor %}
+
+							<div class="divider mb-5"></div>
+
+							<!-- PAGINATE -->
+							<p class="pagination">
+								<a class="btn-link float-left" href="#"><i class="fa fa-angle-left"></i> Previous</a>
+								<a class="btn-link float-right" href="#">Next <i class="fa fa-angle-right"></i></a>
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MOBILE IMAGE -->
+	<div class="mobile-image hidden-md-up">
+		<span class="has-image-bg is-top-right" style="background-image: url(/assets/img/content/news-item-1.jpg)"></span>
+	</div>
+
+</section>
