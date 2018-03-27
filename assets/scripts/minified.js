@@ -25,8 +25,9 @@ function launchCarousel() {
   });
 }function launchGallery() {
   $(".popup-gallery").each(function () {
-    $this = $(this), groupTitle = $this.attr("data-group-title"), $this.magnificPopup({ delegate: "a", type: "image", tLoading: "Loading image #%curr%...", mainClass: "mfp-img-mobile", gallery: { enabled: !0, navigateByImgClick: !0, preload: [0, 1] }, image: { tError: '<a href="%url%">The image #%curr%</a> could not be loaded.', titleSrc: function titleSrc(e) {
-          return e.el.attr("title") + "<small>" + groupTitle + "</small>";
+    var e = $(this),
+        t = e.attr("data-group-title");e.magnificPopup({ delegate: "a", type: "image", tLoading: "Loading image #%curr%...", mainClass: "mfp-img-mobile", gallery: { enabled: !0, navigateByImgClick: !0, preload: [0, 1] }, image: { tError: '<a href="%url%">The image #%curr%</a> could not be loaded.', titleSrc: function titleSrc(e) {
+          return e.el.attr("title") + "<small>" + t + "</small>";
         } } });
   });
 }!function (e, t) {
@@ -5155,6 +5156,30 @@ function launchCarousel() {
         }
       } } }), p();
 }), function (e) {
+  "use strict";
+  var t = e("[data-equal-height-group]"),
+      n = function n(t) {
+    e(t).each(function () {
+      var t,
+          n = 0,
+          i = 0,
+          o = [],
+          r = 0;e(this).find("[data-equal-height]").each(function () {
+        if (t = e(this), e(t).height("auto"), r = t.position().bottom, i != r) {
+          for (var s = 0; s < o.length; s++) {
+            o[s].height(n);
+          }o.length = 0, i = r, n = t.height(), o.push(t);
+        } else o.push(t), n = n < t.height() ? t.height() : n;for (s = 0; s < o.length; s++) {
+          o[s].height(n);
+        }
+      });
+    });
+  };e(window).on("load", function () {
+    n(t);
+  }), e(window).resize(function () {
+    n(t);
+  });
+}(jQuery), function (e) {
   "use strict";
   var t = {},
       n = ["xs", "sm", "md", "lg", "xl", "xxl"];function i() {
