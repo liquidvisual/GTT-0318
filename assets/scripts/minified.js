@@ -5150,13 +5150,6 @@ function launchCarousel() {
       } } }), p();
 }), function (e) {
   "use strict";
-  var t = e(".lv-google-map");t.length && (t.click(function () {
-    t.find("iframe").css("pointer-events", "auto");
-  }), t.mouseleave(function () {
-    t.find("iframe").css("pointer-events", "none");
-  }));
-}(jQuery), function (e) {
-  "use strict";
   var t = {},
       n = ["xs", "sm", "md", "lg", "xl", "xxl"];function i() {
     var n = e("body");1 != e(".lv-screen-data").length && n.append('<div class="lv-screen-data"></div>');var i,
@@ -5247,13 +5240,7 @@ function launchCarousel() {
   }, e("[data-headroom]").each(function () {
     var t = e(this);t.headroom(t.data());
   }));
-}(window.Zepto || window.jQuery), launchCarousel(), $("[data-search-trigger]").click(function (e) {
-  var t = $("[data-search]");return t.removeClass("is-hidden"), $(document).on("scroll", function () {
-    t.addClass("is-hidden"), document.activeElement.blur();
-  }), !1;
-}), $("[data-search] .close").on("click", function () {
-  $("[data-search]").addClass("is-hidden"), document.activeElement.blur();
-}), function (e) {
+}(window.Zepto || window.jQuery), launchCarousel(), function (e) {
   "use strict";
   var t,
       n = e("html"),
@@ -5279,14 +5266,7 @@ function launchCarousel() {
   }), e(".lv-off-canvas .has-dropdown > a").append(l);
 }(jQuery), $(window).on("load", function () {
   $("html").addClass("has-loaded");
-}), $(function () {
-  $('[data-toggle="tooltip"]').tooltip();
 }), $('a[href*="#"]:not([href="#"], [href="#sitemap"])').click(function () {
   var e = $(this).attr("href"),
       t = $(e);if (t.length) return $.scrollTo(t.offset().top, 500), !1;
-}), $('a[href="#sitemap"]').length && $('a[href="#sitemap"]').click(function () {
-  var e = $(this).attr("href"),
-      t = $(e);$(".fa-angle-down").toggleClass("is-active"), setTimeout(function () {
-    $.scrollTo(t.offset().top, 300);
-  }, 300);
 }), $(".global-header").headroom((_$$headroom = { offset: 60, tolerance: 0 }, _defineProperty(_$$headroom, "tolerance", { up: 5, down: 0 }), _defineProperty(_$$headroom, "classes", { initial: "headroom", pinned: "headroom--pinned", unpinned: "headroom--unpinned", top: "headroom--top", notTop: "headroom--not-top", bottom: "headroom--bottom", notBottom: "headroom--not-bottom" }), _defineProperty(_$$headroom, "onPin", function onPin() {}), _defineProperty(_$$headroom, "onUnpin", function onUnpin() {}), _defineProperty(_$$headroom, "onTop", function onTop() {}), _defineProperty(_$$headroom, "onNotTop", function onNotTop() {}), _defineProperty(_$$headroom, "onBottom", function onBottom() {}), _defineProperty(_$$headroom, "onNotBottom", function onNotBottom() {}), _$$headroom));
