@@ -30,7 +30,7 @@ a.document-link,
 	&:before,
 	&:after {
 		font-family: "FontAwesome";
-		max-width: rem-calc(19);
+		min-width: rem-calc(18);
 	}
 
 	&:before {

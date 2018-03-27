@@ -5,25 +5,25 @@
 // Utilities
 //-----------------------------------------------------------------
 
-;(function($) {
-    'use strict';
+// ;(function($) {
+//     'use strict';
 
     //-----------------------------------------------------------------
     // GOOGLE MAP - PREVENT SCROLL TRAP
     //-----------------------------------------------------------------
 
-    var $googleMap = $('.lv-google-map');
+    // var $googleMap = $('.lv-google-map');
 
-    if ($googleMap.length) {
+    // if ($googleMap.length) {
 
-        $googleMap.click(function () {
-            $googleMap.find('iframe').css('pointer-events', 'auto');
-        });
+    //     $googleMap.click(function () {
+    //         $googleMap.find('iframe').css('pointer-events', 'auto');
+    //     });
 
-        $googleMap.mouseleave(function() {
-          $googleMap.find('iframe').css('pointer-events', 'none');
-        });
-    }
+    //     $googleMap.mouseleave(function() {
+    //       $googleMap.find('iframe').css('pointer-events', 'none');
+    //     });
+    // }
 
     //-----------------------------------------------------------------
     // Developer: COMMAND+S for screen width
@@ -61,7 +61,7 @@
     //
     //-----------------------------------------------------------------
 
-}(jQuery));
+// }(jQuery));
 
 //==================================================
 //

@@ -48,21 +48,31 @@
 
 .has-special-pad-1 {
 	@include media-breakpoint-up(md) {
+	    padding-left: $spacer*2;
+	    padding-bottom: $spacer*2;
+	}
+
+	@include media-breakpoint-up(xl) {
 	    padding-left: rem-calc(80);
 	    padding-bottom: rem-calc(70);
 	}
 
-	@include media-breakpoint-up(xl) {
+	@include media-breakpoint-up(xxl) {
 	    padding-right: rem-calc(80);
 	}
 }
 
 .has-special-pad-2 {
 	@include media-breakpoint-up(md) {
-	    padding: rem-calc(70 0 80 70);
+	    padding-left: $spacer*2;
+	    padding-bottom: $spacer*2;
 	}
 
 	@include media-breakpoint-up(xl) {
+	    padding: rem-calc(70 0 80 70);
+	}
+
+	@include media-breakpoint-up(xxl) {
 	    padding: rem-calc(70 80);
 	}
 }
@@ -72,5 +82,7 @@
 //-----------------------------------------------------------------
 
 .has-special-font-size p {
-	font-size: rem-calc(18);
+	@include media-breakpoint-up(md) {
+	    font-size: rem-calc(18);
+	}
 }

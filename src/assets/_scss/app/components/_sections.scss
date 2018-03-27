@@ -41,11 +41,12 @@
 
 .section-body {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
     padding: ($spacer * 2) 0;
-    // border: 1px solid black;
+    // border: 1px solid red;
+
+    @include media-breakpoint-up(md) {
+        padding: ($spacer * 3) 0;
+    }
 
     @include media-breakpoint-up(xl) {
         padding: ($spacer * 5.3) 0;

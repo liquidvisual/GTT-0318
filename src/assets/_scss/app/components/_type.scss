@@ -1,7 +1,7 @@
 /*
     TYPE.CSS
 
-    - Last updated: 27.06.17
+    - Last updated: 27.03.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,8 +12,9 @@
 //--------------------------------------------------------------------
 
 html {
-  // @include media-breakpoint-up(xs) { font-size: rem-calc(14); }
-  // @include media-breakpoint-up(md) { font-size: rem-calc(16); }
+    // @include media-breakpoint-up(xs) { font-size: rem-calc(14); }
+    @include media-breakpoint-up(md) { font-size: rem-calc(15); } // zoomed out slightly for tablets
+    @include media-breakpoint-up(xl) { font-size: rem-calc(16); }
 }
 
 //-----------------------------------------------------------------
@@ -42,7 +43,7 @@ p, ul, ol, td {
 
 h2, .h2 {
     text-transform: uppercase; // covers most use cases
-    margin-bottom: rem-calc(30);
+    margin-bottom: rem-calc(26);
 }
 
 .subheader {
