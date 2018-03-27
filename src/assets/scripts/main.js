@@ -1,5 +1,5 @@
 /*
-    MAIN.JS - Last updated: 29.01.18
+    MAIN.JS - Last updated: 28.03.18
 */
 //-----------------------------------------------------------------
 // VARIABLES
@@ -14,21 +14,13 @@ $(window).on('load', function() {
 });
 
 //-----------------------------------------------------------------
-// ONLOAD - TOOLTIP
-//-----------------------------------------------------------------
-
-// $(function () {
-//     $('[data-toggle="tooltip"]').tooltip();
-// })
-
-//-----------------------------------------------------------------
 // GALLERY
 //-----------------------------------------------------------------
 
 function launchGallery(){
-    $('.popup-gallery').each(function(){
-        $this = $(this);
-        groupTitle = $this.attr('data-group-title');
+    $('.popup-gallery').each(function() {
+        var $this = $(this);
+        var groupTitle = $this.attr('data-group-title');
 
         $this.magnificPopup({
             delegate: 'a',
@@ -46,10 +38,9 @@ function launchGallery(){
                     return item.el.attr('title') + '<small>'+groupTitle+'</small>';
                 }
             }
-        });
+        })
     })
-
-}
+};
 
 //-----------------------------------------------------------------
 // SCROLL TO
@@ -64,21 +55,6 @@ $('a[href*="#"]:not([href="#"], [href="#sitemap"])').click(function() {
         return false;
     }
 });
-
-//-----------------------------------------------------------------
-// OPEN SITEMAP (OPTIONAL)
-//-----------------------------------------------------------------
-
-// if ($('a[href="#sitemap"]').length) {
-//     $('a[href="#sitemap"]').click(function() {
-//         var id = $(this).attr('href');
-//         var endPos = $(id);
-//         $('.fa-angle-down').toggleClass('is-active');
-//         setTimeout(function(){
-//             $.scrollTo(endPos.offset().top, 300);
-//         }, 300);
-//     });
-// }
 
 //-----------------------------------------------------------------
 // HEADROOM.js
@@ -126,6 +102,14 @@ $(".global-header").headroom({
     // callback when moving away from bottom of page, `this` is headroom object
     onNotBottom : function() {}
 });
+
+//-----------------------------------------------------------------
+// ONLOAD - TOOLTIP
+//-----------------------------------------------------------------
+
+// $(function () {
+//     $('[data-toggle="tooltip"]').tooltip();
+// })
 
 //==================================================
 //

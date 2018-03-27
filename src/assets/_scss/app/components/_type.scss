@@ -76,7 +76,7 @@ date {
 //-----------------------------------------------------------------
 
 @include media-breakpoint-down(sm) {
-    h1, .h1 { font-size: calc(#{$h1-font-size} - 60%); }
+    h1, .h1 { font-size: calc(#{$h1-font-size} - 70%); }
     h2, .h2 { font-size: calc(#{$h2-font-size} - 40%); }
     h3, .h3 { font-size: calc(#{$h3-font-size} - 30%); }
     h4, .h4 { font-size: calc(#{$h4-font-size} - 20%); }
