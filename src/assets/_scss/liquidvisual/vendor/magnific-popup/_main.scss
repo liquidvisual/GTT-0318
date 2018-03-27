@@ -509,6 +509,7 @@ button {
       display: block;
       font-size: 12px;
       line-height: 14px;
+      margin-top: 5px;
     }
     figure {
       margin: 0;
@@ -668,12 +669,12 @@ button {
 .mfp-arrow-left:before,
 .mfp-arrow-left .mfp-b {
 	margin-left: 25px;
-	border-right: 27px solid aqua; //$primary-color; /* this */
+	border-right: 27px solid $primary; //$primary-color; /* this */
 }
 
 .mfp-arrow-right:before,
 .mfp-arrow-right .mfp-b {
-	border-left: 27px solid aqua; //$primary-color;
+	border-left: 27px solid $primary; //$primary-color;
 }
 
 /* inner arrows */

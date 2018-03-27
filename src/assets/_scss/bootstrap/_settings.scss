@@ -186,14 +186,14 @@ $link-hover-decoration:     none; //underline !default;
 // // Define the minimum dimensions at which your layout will change,
 // // adapting to different screen sizes, for use in media queries.
 
-$container-gutter: 30px; // [LOCKED] - lv added
+$container-gutter: 50px; // [LOCKED] - lv added
 
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px + $container-gutter*2,
+  xl: 1260px + $container-gutter*2,
   xxl: 1420px + $container-gutter*2
 ) !default;
 
@@ -206,10 +206,10 @@ $grid-breakpoints: (
 // // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 540px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1200px + $container-gutter*2,
+  // sm: 540px,
+  // md: 768px,
+  // lg: 1024px,
+  xl: 1260px + $container-gutter*2,
   xxl: 1420px + $container-gutter*2
 ) !default;
 

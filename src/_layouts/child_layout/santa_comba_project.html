@@ -18,8 +18,29 @@ layout: base__page
 							<!-- WYSIWYG -->
 							<div class="wysiwyg">
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
-								<br>
 							</div>
+
+							<div class="spacer mb-4"></div>
+
+							<!-- POPUP GALLERY -->
+							<ul class="block-grid-xs-2 block-grid-lg-3 block-grid-xl-4 block-grid-condensed popup-gallery mb-4" data-group-title="Santa Comba Project">
+								{% for i in (1..2) %}
+									<li>
+										<a class="btn-tile" href="http://placehold.it/800x600" title="Fig. 4A - Description goes here, longer text if required {{ i }}">
+											<img width="100%" src="/assets/img/layout/thumb-sizer--400x300.svg" alt="Image Dimensions">
+											<span class="btn-tile-bg" style="background-image: url(http://placehold.it/400x300)"></span>
+											<span class="btn-tile-label" data-match-height>Fig. 4A - Description goes here, longer text if required {{ i }}</span>
+										</a>
+									</li>
+									<li>
+										<a class="btn-tile" href="http://placehold.it/800x600" title="Fig. 4A - Description goes here, longer text if required {{ i }}">
+											<img width="100%" src="/assets/img/layout/thumb-sizer--400x300.svg" alt="Image Dimensions">
+											<span class="btn-tile-bg" style="background-image: url(http://placehold.it/400x300)"></span>
+											<span class="btn-tile-label" data-match-height>Fig. 4A - Description goes here, longer text if required longer longer {{ i }}</span>
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
 
 							<h2>History</h2>
 
@@ -140,24 +161,14 @@ layout: base__page
 			<h2>Photo Gallery</h2>
 			<div class="spacer mb-3"></div>
 
-			<ul class="block-grid-xs-2 block-grid-md-4 block-grid-condensed popup-gallery">
+			<!-- POPUP GALLERY -->
+			<ul class="block-grid-xs-2 block-grid-md-4 block-grid-condensed popup-gallery" data-group-title="Santa Comba Project">
 				{% for i in (1..8) %}
 					<li>
-						<a class="btn-tile" href="http://placehold.it/400x230" title="Lorem ipsum dolor sit amet">
-							<img width="100%" src="/assets/img/layout/thumb-sizer--400x230.svg" alt="...">
-							<span class="btn-tile-bg" style="background-image: url(http://placehold.it/400x230)"></span>
+						<a class="btn-tile" href="http://placehold.it/800x600" title="Lorem ipsum dolor sit amet {{ i }}">
+							<img width="100%" src="/assets/img/layout/thumb-sizer--400x300.svg" alt="Image Dimensions">
+							<span class="btn-tile-bg" style="background-image: url(http://placehold.it/400x300)"></span>
 						</a>
-						<!-- <div class="popup-gallery">
-						    <a href="/assets/img/ui/no-face.png" title="Lorem ipsum dolor sit amet,">
-						        <img src="/assets/img/ui/no-face.png" width="75" height="75">
-						    </a>
-						    <a href="/assets/img/ui/no-face.png" title="The Cleaner">
-						        <img src="/assets/img/ui/no-face.png" width="75" height="75">
-						    </a>
-						    <a href="/assets/img/ui/no-face.png" title="The Cleaner">
-						        <img src="/assets/img/ui/no-face.png" width="75" height="75">
-						    </a>
-						</div> -->
 					</li>
 				{% endfor %}
 			</ul>
