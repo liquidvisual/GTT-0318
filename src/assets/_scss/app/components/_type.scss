@@ -27,6 +27,10 @@ a {
                 opacity 300ms ease;
 }
 
+.wysiwyg a {
+    font-weight: 600;
+}
+
 .anchor-link:hover {
     opacity: 0.8;
 }
@@ -69,6 +73,10 @@ b, strong {
 
 date {
     color: #aeb2be;
+}
+
+.text-normal {
+    text-transform: none;
 }
 
 //-----------------------------------------------------------------

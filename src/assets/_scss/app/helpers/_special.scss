@@ -86,3 +86,27 @@
 	    font-size: rem-calc(18);
 	}
 }
+
+//-----------------------------------------------------------------
+// SPECIAL SIDE IMAGE
+//-----------------------------------------------------------------
+
+.special-side-image {
+	@include media-breakpoint-down(md) {
+	    padding-top: 0;
+	}
+}
+
+//-----------------------------------------------------------------
+// SPEC TEST - testing
+//-----------------------------------------------------------------
+
+.spec-test {
+	position: relative;
+	border: 1px solid grey;
+    background-image: url(/assets/img/content/news-item-1.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+    z-index: -1;
+}

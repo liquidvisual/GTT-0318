@@ -65,7 +65,7 @@
                 $equalHeightTarget.each(function() {
                     $el = $(this);
                     $($el).height('auto');
-                    topPosition = $el.position().bottom; // top
+                    topPosition = $el.position().top;
 
                     if (currentRowStart != topPosition) {
                         for (var currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {

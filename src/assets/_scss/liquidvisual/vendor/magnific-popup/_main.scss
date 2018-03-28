@@ -101,6 +101,15 @@ $mfp-use-visuallyhidden:              false !default; // Hide content from brows
   position: fixed;
   outline: none !important;
   -webkit-backface-visibility: hidden; // fixes webkit bug that can cause "false" scrollbar
+
+  // fixes chrome issue with blue highlights
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+         -o-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 // Root container

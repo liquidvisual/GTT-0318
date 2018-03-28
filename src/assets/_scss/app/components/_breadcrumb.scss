@@ -8,16 +8,34 @@
 // VARIABLES
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
+// BREADCRUMB WRAPPER
+//-----------------------------------------------------------------
+
+.breadcrumb-wrapper {
+	@include media-breakpoint-down(sm) {
+		box-shadow: 0 -49px 1px 50px #f4f4f4; // hack
+	    overflow: hidden; // fix bleed on breadcrumbs (adhoc)
+	}
+}
+
+//-----------------------------------------------------------------
 // BREADCRUMB
 //-----------------------------------------------------------------
 
 .breadcrumb {
-    position: absolute;
-    top: 0;
-	z-index: 1;
-	background: #f3f3f3;
-	width: 200%;
-	padding: rem-calc(10 0);
+	margin-bottom: 0;
+	border-radius: 0;
+
+	a {
+		font-size: rem-calc(14);
+		font-weight: 600;
+		text-transform: uppercase;
+		// color: lighten(#f4f4f4, 20%);
+
+		&:hover {
+			color: lighten($body-color, 10%);
+		}
+	}
 }
 
 //-----------------------------------------------------------------

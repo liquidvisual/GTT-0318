@@ -1,0 +1,35 @@
+/*
+    CARDS.CSS
+
+    - updated: 28.03.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// THUMB CARD
+//-----------------------------------------------------------------
+
+.thumb-card {
+    .card-body {
+        padding: rem-calc(8 10);
+        background: $tertiary;
+        font-size: rem-calc(14);
+        line-height: 1.2;
+        color: white;
+        transition: background 150ms ease;
+
+        &:hover {
+            background: lighten($tertiary, 2%);
+        }
+    }
+}
+
+.popup-gallery a {
+    outline: none; // special
+}
+
+//=========================================
+//
+//=========================================

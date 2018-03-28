@@ -57,7 +57,7 @@ layout: base__page
 							{% for item in site.data.lorem_ipsum | limit: 3 %}
 								<hr>
 								<article class="pr-lg-4">
-									<h3>{{ item.title }}</h3>
+									<h3><a href="/investors/news/news-item/">{{ item.title }}</a></h3>
 									<p><b class="text-uppercase"><date>{{ item.date | date: "%d %B %Y" }}</date></b></p>
 									<p class="mb-1">{{ item.body | truncate: 350 }}</p>
 									<a class="text-uppercase anchor-link" href="/investors/news/news-item/"><b>Read more</b> <i class="fa fa-angle-right"></i></a>

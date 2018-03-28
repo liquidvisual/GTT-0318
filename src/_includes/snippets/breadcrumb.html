@@ -1,6 +1,6 @@
 {% comment %}
 <!--
-    Updated: 10.05.17
+    Updated: 28.03.18
     Basic output:
 
         <nav class="breadcrumb">
@@ -14,15 +14,15 @@
 
 {% assign crumbs = page.url | split: '/' %}
 
-<!-- BREADCRUMB -->
-<nav class="breadcrumb mb-0">
+<nav class="breadcrumb">
     <div class="container">
-        <a class="breadcrumb-item" href="/">Home</a>
-        {% for item in crumbs offset: 1 %}
+        {% for crumb in crumbs offset: 1 %}
             {% if forloop.last %}
-                <span class="breadcrumb-item">{{ item | replace:'-',' ' | capitalize }}</span>
+
+            <!-- { % elsif forloop.first %} -->
+
             {% else %}
-                <a class="breadcrumb-item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for item in crumbs limit: crumb_limit %}{{ item | append: '/' }}{% endfor %}">{{ item | replace:'-',' ' | capitalize }}</a>
+                <a class="breadcrumb-item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}"><i class="fa fa-angle-left"></i>&nbsp; Back to {{ crumb | replace:'-',' ' }}</a>
             {% endif %}
         {% endfor %}
     </div>

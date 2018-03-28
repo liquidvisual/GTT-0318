@@ -4,13 +4,7 @@ layout: base
 
 {% include hero_secondary.html %}
 
-{% if page.breadcrumbs %}
-	{% include snippets/breadcrumb.html %}
-{% endif %}
-
 <!-- BODY -->
 <main class="main-body">
 	{{ content }}
-
-	{% contentblock content_additional no-convert %}
 </main>

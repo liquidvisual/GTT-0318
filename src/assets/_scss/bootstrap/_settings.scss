@@ -890,16 +890,16 @@ $input-placeholder-color:               $body-color; //$gray-600 !default;
 
 // // Breadcrumbs
 
-// $breadcrumb-padding-y:              .75rem !default;
-// $breadcrumb-padding-x:              1rem !default;
+$breadcrumb-padding-y:              rem-calc(10);// .75rem !default;
+$breadcrumb-padding-x:              0; //1rem !default;
 // $breadcrumb-item-padding:           .5rem !default;
 
 // $breadcrumb-margin-bottom:          1rem !default;
 
-// $breadcrumb-bg:                     $gray-200 !default;
+$breadcrumb-bg:                     #f4f4f4; //$gray-200 !default;
 // $breadcrumb-divider-color:          $gray-600 !default;
 // $breadcrumb-active-color:           $gray-600 !default;
-// $breadcrumb-divider:                "/" !default;
+$breadcrumb-divider:                ""; ///" !default;
 
 
 // // Carousel
