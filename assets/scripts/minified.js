@@ -5165,7 +5165,7 @@ function launchCarousel() {
           i = 0,
           o = [],
           r = 0;e(this).find("[data-equal-height]").each(function () {
-        if (t = e(this), e(t).height("auto"), r = t.position().bottom, i != r) {
+        if (t = e(this), e(t).height("auto"), r = t.position().top, i != r) {
           for (var s = 0; s < o.length; s++) {
             o[s].height(n);
           }o.length = 0, i = r, n = t.height(), o.push(t);
